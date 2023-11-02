@@ -12,6 +12,24 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 
+#define INFO_INIT \
+{NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
+	0, 0, 0}
+
+#define HIST_MAX 4096
+#define HIST_FILE ".simple_shell_history"
+#define CONVERT_UNSIGNED 2
+#define CONVERT_LOWERCASE 1
+#define WRITE_BUF_SIZE 1024
+#define BUF_FLUSH -1
+#define READ_BUF_SIZE 1024
+#define CMD_CHAIN 3
+#define CMD_OR 1
+#define CMD_AND 2
+#define CMD_NORM 0
+#define USE_STRTOK 0
+#define USE_GETLINE 0
+
 extern char **environ;
 
 int _strlen(char *s);
