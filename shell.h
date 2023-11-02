@@ -123,5 +123,10 @@ char *_strcat(char *dest, char *src);
 void _puts(char *str);
 char *_strcpy(char *dest, char *src);
 char *_strdup(const char *str);
+char *_strncpy(char *dest, char *src, int n);
+char *_strncat(char *dest, char *src, int n);
+int _delimeter(char s, char *del);
+int _isalpha(int s);
+int str_to_int(char *s);
 
 #endif
