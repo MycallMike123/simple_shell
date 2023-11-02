@@ -12,6 +12,8 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 
+extern char **environ;
+
 int _strlen(char *s);
 char *commence(const char *hay, const char *needle);
 char *_memset(char *s, char b, unsigned int n);
@@ -61,6 +63,20 @@ typedef struct pseudo_arg
 	char *path;
 	char *arg;
 } shell_t;
+
+/**
+ * struct lss - singly linked list
+ * @num: the number
+ * @str: the string
+ * @next: points to the next node
+ */
+
+typedef struct lss
+{
+	int num;
+	char *str;
+	struct liststr *next;
+} list_t;
 
 
 #endif
