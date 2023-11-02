@@ -129,4 +129,10 @@ int _delimeter(char s, char *del);
 int _isalpha(int s);
 int str_to_int(char *s);
 
+list_t *handle_node(list_t **_start, const char *str, int num);
+list_t *ending_node(list_t **_start, const char *str, int num);
+ssize_t getnode_idx(list_t *_start, list_t *node);
+list_t *start_node(list_t *node, char *pref, char c);
+int del_node_idx(list_t **_start, unsigned int idx);
+
 #endif
