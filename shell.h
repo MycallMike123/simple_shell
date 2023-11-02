@@ -81,7 +81,7 @@ typedef struct pseudo_arg
 	char *path;
 	char *arg;
 } shell_t;
-
+i
 /**
  * struct lss - singly linked list
  * @num: the number
@@ -96,5 +96,16 @@ typedef struct lss
 	struct liststr *next;
 } list_t;
 
+/**
+ * struct builtin - contains a builtin str and related function
+ * @type: the builtin command_flag
+ * @fn: the function
+ */
+
+typedef struct builtin
+{
+	char *type;
+	int (*fn)(shell_t *);
+} bi_t;
 
 #endif
