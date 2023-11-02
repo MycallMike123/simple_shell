@@ -12,4 +12,10 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 
+int _strlen(char *s);
+char *commence(const char *hay, const char *needle);
+char *_memset(char *s, char b, unsigned int n);
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
+void ffree(char **str);
+
 #endif
