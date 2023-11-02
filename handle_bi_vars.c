@@ -3,14 +3,14 @@
 /**
  * string_substitute - replaces string
  * @old: address of old string
- * @new: address of the new string
+ * @_new: address of the new string
  * Return: 1 success
  */
 
-int string_substitute(char **old, char *new)
+int string_substitute(char **old, char *_new)
 {
 	free(*old);
-	*old = new;
+	*old = _new;
 	return (1);
 }
 
@@ -99,11 +99,11 @@ int chain_check(shell_t *cont, char *buf, size_t *ptr)
  * @cont: pointer to the struct
  * @buf: pointer to the char buffer
  * @ptr: address of current position
- * @st: starting position in the buffer
+ * @a: starting position in the buffer
  * @len: length of the buf
  */
 
-void handle_chain(shell_t *cont, char *buf, size_t *ptr, size_t st, size_t len)
+void handle_chain(shell_t *cont, char *buf, size_t *ptr, size_t a, size_t len)
 {
 	size_t b = *ptr;
 
@@ -111,7 +111,7 @@ void handle_chain(shell_t *cont, char *buf, size_t *ptr, size_t st, size_t len)
 	{
 		if (cont->process)
 		{
-			buf[st] = 0;
+			buf[a] = 0;
 			b = len;
 		}
 	}
@@ -120,7 +120,7 @@ void handle_chain(shell_t *cont, char *buf, size_t *ptr, size_t st, size_t len)
 	{
 		if (!cont->process)
 		{
-			buf[st] = 0;
+			buf[a] = 0;
 			b = len;
 		}
 	}

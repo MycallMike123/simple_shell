@@ -108,4 +108,14 @@ typedef struct builtin
 	int (*fn)(shell_t *);
 } bi_t;
 
+int handle_command(shell_t *cont, char *path);
+char *handle_find_path(shell_t *cont, char *_path, char *cmd);
+char *duplicate_char(char *_path, int st_idx, int sp_idx);
+int _free(void **p);
+int string_substitute(char **old, char *_new);
+int alias_substitute(shell_t *cont);
+int chain_check(shell_t *cont, char *buf, size_t *ptr);
+void handle_chain(shell_t *cont, char *buf, size_t *ptr, size_t a, size_t len);
+int var_substitute(shell_t *cont);
+
 #endif
