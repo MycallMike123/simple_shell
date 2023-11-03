@@ -106,7 +106,7 @@ ssize_t buffer_input(shell_t *cont, char **buffer, size_t *length)
 			}
 			cont->lcf = 1;
 			handle_comments(*buffer);
-			handle_add_list(cont, *buffer, cont->history_count++);
+			handle_add_hist(cont, *buffer, cont->history_count++);
 
 			if (_strchr(*buffer, ';'))
 			{
