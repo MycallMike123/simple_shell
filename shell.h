@@ -39,6 +39,20 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 void ffree(char **str);
 
 /**
+ * struct lss - singly linked list
+ * @num: the number
+ * @str: the string
+ * @next: points to the next node
+ */
+
+typedef struct lss
+{
+	int num;
+	char *str;
+	struct lss *next;
+} list_t;
+
+/**
  * struct pseudo_arg - contains arguments to pass to fns
  * @argv:an array of strings
  * @argc: the argument count
@@ -81,20 +95,6 @@ typedef struct pseudo_arg
 	char *path;
 	char *arg;
 } shell_t;
-
-/**
- * struct lss - singly linked list
- * @num: the number
- * @str: the string
- * @next: points to the next node
- */
-
-typedef struct lss
-{
-	int num;
-	char *str;
-	struct lss *next;
-} list_t;
 
 /**
  * struct builtin - contains a builtin str and related function
