@@ -115,9 +115,9 @@ int alias_print(list_t *node)
 
 		for (c = node->str; c <= ptr; c++)
 		{
-			_putchar(*a);
+			_putchar(*c);
 			_putchar('\'');
-			_puts(p + 1);
+			_puts(ptr + 1);
 			_puts("'\n");
 			return (0);
 		}
