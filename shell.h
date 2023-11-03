@@ -184,4 +184,10 @@ char *getenv_command(shell_t *cont, const char *nam);
 int new_env(shell_t *cont);
 int remove_env(shell_t *cont);
 
+int input_file_descriptor(char c, int file_descriptor);
+int input_fd_string(char *s, int file_descriptor);
+int print_char(char c);
+void input_str(char *s);
+int convert_error(char *s);
+
 #endif
