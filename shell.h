@@ -178,5 +178,10 @@ int alias_set(shell_t *cont, char *str);
 int handle_unset_alias(shell_t *cont, char *str);
 int alias_print(list_t *node);
 int handle_hist(shell_t *cont);
+int handle_env(shell_t *cont);
+int locate_env(shell_t *cont);
+char *getenv_command(shell_t *cont, const char *nam);
+int new_env(shell_t *cont);
+int remove_env(shell_t *cont);
 
 #endif
