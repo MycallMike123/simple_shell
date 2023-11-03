@@ -155,6 +155,9 @@ int handle_exit(shell_t *cont);
 int process_cd(shell_t *cont);
 int handle_change_directory(shell_t *cont);
 int _putchar(char c);
+int setenv_command(shell_t *cont, char *var, char *val);
+int unsetenv_command(shell_t *cont, char *var);
+char **env_copy(shell_t *cont);
 
 
 #endif
