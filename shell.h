@@ -173,4 +173,10 @@ ssize_t buffer_input(shell_t *cont, char **buffer, size_t *length);
 ssize_t buffer_read(shell_t *cont, char *buffer, size_t *length);
 ssize_t get_line(shell_t *cont);
 
+int handle_alias(shell_t *cont);
+int alias_set(shell_t *cont, char *str);
+int handle_unset_alias(shell_t *cont, char *str);
+int alias_print(list_t *node);
+int handle_hist(shell_t *cont);
+
 #endif
