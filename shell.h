@@ -167,5 +167,10 @@ int create_history(shell_t *cont);
 void handle_info(shell_t *cont, char **argument_vector);
 void release_info(shell_t *cont, int i);
 void handle_clear_info(shell_t *cont);
+int getline_command(shell_t *cont, char **p, size_t *len);
+char *_strchr(char *s, char c);
+ssize_t buffer_input(shell_t *cont, char **buffer, size_t *length);
+ssize_t buffer_read(shell_t *cont, char *buffer, size_t *length);
+ssize_t get_line(shell_t *cont);
 
 #endif
