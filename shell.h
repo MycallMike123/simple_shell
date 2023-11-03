@@ -134,5 +134,11 @@ list_t *ending_node(list_t **_start, const char *str, int num);
 ssize_t getnode_idx(list_t *_start, list_t *node);
 list_t *start_node(list_t *node, char *pref, char c);
 int del_node_idx(list_t **_start, unsigned int idx);
+size_t string_list(const list_t *p);
+void handle_freelist(list_t **_start);
+size_t list_print(const list_t *p);
+size_t handle_list_length(const list_t *p);
+char **lts(list_t *_start);
+
 
 #endif
