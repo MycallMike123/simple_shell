@@ -174,7 +174,7 @@ int create_history(shell_t *cont)
 		input_file_descriptor('\n', file_descriptor);
 	}
 
-	input_fd_string(BUF_FLUSH, file_descriptor);
+	input_file_descriptor(BUF_FLUSH, file_descriptor);
 	close(file_descriptor);
 	return (1);
 }
