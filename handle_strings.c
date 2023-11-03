@@ -82,7 +82,7 @@ int _delimeter(char s, char *del)
 
 int _isalpha(int s)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	if ((s >= 'a' && s <= 'z') || (s >= 'A' && s <= 'Z'))
 	{
 		return (1);
 	}
