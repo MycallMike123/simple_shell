@@ -159,5 +159,11 @@ int setenv_command(shell_t *cont, char *var, char *val);
 int unsetenv_command(shell_t *cont, char *var);
 char **env_copy(shell_t *cont);
 
+char *handle_history(shell_t *cont);
+int handle_read_history(shell_t *cont);
+int handle_numbering_hist(shell_t *cont);
+int handle_add_list(shell_t *cont, char *buffer, int line_cnt);
+int create_history(shell_t *cont);
+
 
 #endif
