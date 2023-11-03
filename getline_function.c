@@ -95,7 +95,7 @@ ssize_t buffer_input(shell_t *cont, char **buffer, size_t *length)
 #if USE_GETLINE
 		_read = getline(buffer, &len, stdin);
 #else
-		_read = _getline(cont, buffer, &len);
+		_read = getline_command(cont, buffer, &len);
 #endif
 		if (_read > 0)
 		{
@@ -106,7 +106,7 @@ ssize_t buffer_input(shell_t *cont, char **buffer, size_t *length)
 			}
 			cont->lcf = 1;
 			handle_comments(*buffer);
-			hist_list(cont, *buffer, cont->history_count++);
+			handle_add_list(cont, *buffer, cont->history_count++);
 
 			if (_strchr(*buffer, ';'))
 			{
