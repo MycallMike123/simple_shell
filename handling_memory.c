@@ -2,21 +2,22 @@
 
 /**
  * ffree - frees a string
- * @str: pointer to pointer to the string
+ * @st_r: pointer to pointer to the string
  */
 
-void ffree(char **str)
+void ffree(char **st_r)
 {
-	char **p = str;
+	char **p = st_r;
 
-	if (!str)
+	if (!st_r || !*st_r)
 	{
 		return;
 	}
 
-	while (str)
+	while (*st_r)
 	{
-		free(*str++);
+		free(*st_r);
+		st_r++;
 	}
 
 	free(p);

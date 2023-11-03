@@ -13,8 +13,8 @@
 #include <sys/types.h>
 
 #define INFO_INIT \
-{NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
-	0, 0, 0}
+{NULL, 0, 0, NULL, NULL, NULL, 0, 0, 0, 0, NULL, 0, NULL, NULL, 0, \
+	0, NULL, NULL}
 
 #define HIST_MAX 4096
 #define HIST_FILE ".simple_shell_history"
@@ -36,7 +36,7 @@ int _strlen(char *s);
 char *commence(const char *hay, const char *needle);
 char *_memset(char *s, char b, unsigned int n);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
-void ffree(char **str);
+void ffree(char **st_r);
 
 /**
  * struct lss - singly linked list

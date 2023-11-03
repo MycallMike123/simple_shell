@@ -61,17 +61,14 @@ int getline_command(shell_t *cont, char **p, size_t *len)
 
 char *_strchr(char *s, char c)
 {
-	int a;
-
-	for (a = 0; s[a] >= '\0'; s++)
-	{
-		if (s[a] == c)
+	do {
+		if (*s == c)
 		{
-			return (&s[a]);
+			return (s);
 		}
-	}
+	} while (*s++ != '\0');
 
-	return (0);
+	return (NULL);
 }
 
 /**

@@ -142,7 +142,12 @@ char *duplicate_char(char *_path, int st_idx, int sp_idx)
 	a = 0;
 	b = 0;
 
-	for (b = 0, a = st_idx; a < sp_idx; b++)
+	if (buf == NULL)
+	{
+		return (NULL);
+	}
+
+	for (b = 0, a = st_idx; a < sp_idx; a++)
 	{
 		if (_path[a] != ':')
 		{
