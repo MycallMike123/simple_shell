@@ -144,5 +144,10 @@ int hsh(shell_t *cont, char **argv);
 void command_fork(shell_t *cont);
 void find_command(shell_t *cont);
 int find_b(shell_t *cont);
+int print_decimal(int input, int file_descriptor);
+char *convert_num(long int num, int b, int fl);
+void print_err(shell_t *cont, char *err_type);
+void handle_comments(char *buffer);
+void handle_sigint(__attribute__((unused))int sig_n);
 
 #endif
