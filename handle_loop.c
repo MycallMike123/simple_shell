@@ -9,11 +9,11 @@
 
 int hsh(shell_t *cont, char **argv)
 {
-	int bi;
+	int handling_builtin;
 	ssize_t _read = 0;
 
-	bi = 0;
-	while (_read != -1 && bi != -2)
+	handling_builtin = 0;
+	while (_read != -1 && handling_builtin != -2)
 	{
 		handle_clear_info(cont);
 		if (interactive(cont))
