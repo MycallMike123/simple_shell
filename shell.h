@@ -164,6 +164,8 @@ int handle_read_history(shell_t *cont);
 int handle_numbering_hist(shell_t *cont);
 int handle_add_list(shell_t *cont, char *buffer, int line_cnt);
 int create_history(shell_t *cont);
-
+void handle_info(shell_t *cont, char **argument_vector);
+void release_info(shell_t *cont, int i);
+void handle_clear_info(shell_t *cont);
 
 #endif
