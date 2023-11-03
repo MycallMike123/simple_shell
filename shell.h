@@ -162,7 +162,7 @@ char **env_copy(shell_t *cont);
 char *handle_history(shell_t *cont);
 int handle_read_history(shell_t *cont);
 int handle_numbering_hist(shell_t *cont);
-int handle_add_list(shell_t *cont, char *buffer, int line_cnt);
+int handle_add_hist(shell_t *cont, char *buffer, int line_cnt);
 int create_history(shell_t *cont);
 void handle_info(shell_t *cont, char **argument_vector);
 void release_info(shell_t *cont, int i);
@@ -189,5 +189,6 @@ int input_fd_string(char *s, int file_descriptor);
 int print_char(char c);
 void input_str(char *s);
 int convert_error(char *s);
+char **strtow(char *str, char *delim);
 
 #endif
