@@ -59,7 +59,7 @@ int process_cd(shell_t *cont)
 
 	if (0)
 	{
-		_puts(*args)
+		_puts(*args);
 	}
 
 	return (0);
