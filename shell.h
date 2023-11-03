@@ -150,4 +150,11 @@ void print_err(shell_t *cont, char *err_type);
 void handle_comments(char *buffer);
 void handle_sigint(__attribute__((unused))int sig_n);
 
+int interactive(shell_t *cont);
+int handle_exit(shell_t *cont);
+int process_cd(shell_t *cont);
+int handle_change_directory(shell_t *cont);
+int _putchar(char c);
+
+
 #endif
