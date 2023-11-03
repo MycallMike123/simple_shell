@@ -118,14 +118,14 @@ int handle_numbering_hist(shell_t *cont)
 }
 
 /**
- * handle_add_list - Adds entry
+ * handle_add_hist - Adds entry
  * @cont: pointer to the struct
  * @buffer: pointer to the buf
  * @line_cnt: the count of the history line count
  * Return: 0 Success
  */
 
-int handle_add_list(shell_t *cont, char *buffer, int line_cnt)
+int handle_add_hist(shell_t *cont, char *buffer, int line_cnt)
 {
 	list_t *node = NULL;
 
