@@ -10,7 +10,7 @@ int _putchar(char c);
 
 int interactive(shell_t *cont)
 {
-	return (isatty(STDIN_FILENO) && cont->read_str <= 2);
+	return (isatty(STDIN_FILENO) && cont->read_file_descriptor <= 2);
 }
 
 /**
