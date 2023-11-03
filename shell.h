@@ -140,5 +140,9 @@ size_t list_print(const list_t *p);
 size_t handle_list_length(const list_t *p);
 char **lts(list_t *_start);
 
+int hsh(shell_t *cont, char **argv);
+void command_fork(shell_t *cont);
+void find_command(shell_t *cont);
+int find_b(shell_t *cont);
 
 #endif
