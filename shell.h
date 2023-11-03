@@ -81,7 +81,7 @@ typedef struct pseudo_arg
 	char *path;
 	char *arg;
 } shell_t;
-i
+
 /**
  * struct lss - singly linked list
  * @num: the number
@@ -93,7 +93,7 @@ typedef struct lss
 {
 	int num;
 	char *str;
-	struct liststr *next;
+	struct lss *next;
 } list_t;
 
 /**
