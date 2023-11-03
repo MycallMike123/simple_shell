@@ -63,7 +63,7 @@ void release_info(shell_t *cont, int i)
 		ffree(cont->environ);
 		cont->environ = NULL;
 
-		bfree((void **)cont->command_buffer);
+		_free((void **)cont->command_buffer);
 		if (cont->read_file_descriptor > 2)
 		{
 			close(cont->read_file_descriptor);
