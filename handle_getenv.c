@@ -60,18 +60,21 @@ int unsetenv_command(shell_t *cont, char *var)
 	size_t a = 0;
 	list_t *node = cont->env;
 
-	if (!node || !var)
+	while (node)
 	{
-		ptr = commence(node->str, var);
-		if (ptr && *ptr == '=')
+		if (!var)
 		{
-			cont->environ_c = del_node_idx(&(cont->env), a);
-			a = 0;
-			node = cont->env;
-			continue;
+			ptr = commence(node->str, var);
+			if (ptr && *ptr == '=')
+			{
+				cont->environ_c = del_node_idx(&(cont->env), a);
+				a = 0;
+				node = cont->env;
+				continue;
+			}
+			node = node->next;
+			a++;
 		}
-		node = node->next;
-		a++;
 	}
 	return (cont->environ_c);
 }
