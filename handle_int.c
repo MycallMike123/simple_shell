@@ -71,7 +71,7 @@ char *convert_num(long int num, int b, int fl)
 	arr = fl & CONVERT_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
 
 	p = &buf[49];
-	p =  '\0';
+	*p =  '\0';
 
 	do {
 		*--p = arr[n % b];
