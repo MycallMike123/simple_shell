@@ -21,6 +21,7 @@
 #define CONVERT_UNSIGNED 2
 #define CONVERT_LOWERCASE 1
 #define WRITE_BUF_SIZE 1024
+
 #define BUF_FLUSH -1
 #define READ_BUF_SIZE 1024
 #define CMD_CHAIN 3
